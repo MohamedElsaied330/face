@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "emulators": {
+      "hosting": {
+        "port": 5004
+      }
+    },
+    "port": 5000,
+    "host": "0.0.0.0",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [ {
+      "source": "/foo",
+      "destination": "/bar",
+      "type": 301
+    } ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
